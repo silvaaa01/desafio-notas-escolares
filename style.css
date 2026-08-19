@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* PERSONALIZE AQUI: cor de fundo */
+  background-color: <span style="color:red;">#e8f0fe</span>;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.container {
+  width: 500px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: <span style="color:red;">#1a237e</span>;  /* tom de azul escuro */
+  margin-bottom: 20px;
+}
+
+.formulario {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.campo {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  flex: 1 1 150px;
+}
+
+/* PERSONALIZE AQUI: cor do botão principal */
+.btn {
+  background-color: <span style="color:red;">#3949ab</span>;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  flex: 1 1 100%;
+}
+
+.btn:hover {
+  background-color: <span style="color:red;">#283593</span>;
+}
+
+#lista-transacoes {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.transacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  /* Borda padrão neutra */
+  border-left: 5px solid <span style="color:red;">#90caf9</span>;
+}
+
+/* PERSONALIZE AQUI: classe para nota baixa (menor que 6) */
+.transacao.nota-baixa {
+  border-left-color: <span style="color:red;">#e53935</span>;  /* vermelho */
+}
+/* PERSONALIZE AQUI: classe para nota alta (6 ou mais) */
+.transacao.nota-alta {
+  border-left-color: <span style="color:red;">#43a047</span>;  /* verde */
+}
+
+.info {
+  flex-grow: 1;
+}
+
+/* PERSONALIZE AQUI: botão excluir */
+.btn-excluir {
+  background-color: <span style="color:red;">#e53935</span>;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.resultado {
+  text-align: right;
+  font-size: 1.5em;
+  color: #1a237e;
+  margin-top: 10px;
+}
+
+/* PERSONALIZE AQUI: média boa (>=6) fica verde; média ruim (<6) fica vermelha */
+#saldo.positivo {
+  color: <span style="color:red;">#2e7d32</span>;
+}
+#saldo.negativo {
+  color: <span style="color:red;">#c62828</span>;
+}
