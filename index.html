@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- PERSONALIZE AQUI: título da aba -->
+  <title><span style="color:red;">📚 Minhas Notas</span></title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- PERSONALIZE AQUI: título principal -->
+    <h1><span style="color:red;">📚 Controle de Notas Escolares</span></h1>
+
+    <div class="formulario">
+      <!-- PERSONALIZE AQUI: placeholder da matéria -->
+      <input type="text" id="descricao" placeholder="<span style="color:red;">Disciplina (ex: Matemática)</span>" class="campo">
+      <!-- PERSONALIZE AQUI: campo de nota (0 a 10, com passo de 0.1) -->
+      <input type="number" id="valor" placeholder="<span style="color:red;">Nota (0 a 10)</span>" step="0.1" min="0" max="10" class="campo">
+      
+      <!-- (Opcional) Se quiser manter um campo de bimestre, descomente abaixo -->
+      <!--
+      <select id="tipo" class="campo">
+        <option value="1º Bim">1º Bimestre</option>
+        <option value="2º Bim">2º Bimestre</option>
+        <option value="3º Bim">3º Bimestre</option>
+        <option value="4º Bim">4º Bimestre</option>
+      </select>
+      -->
+
+      <button id="btn-adicionar" class="btn"><span style="color:red;">Adicionar Nota</span></button>
+    </div>
+
+    <h2><span style="color:red;">Disciplinas Lançadas</span></h2>
+    <ul id="lista-transacoes"></ul>
+
+    <div class="resultado">
+      <h3><span style="color:red;">Média Geral:</span> <span id="saldo">0,0</span></h3>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
